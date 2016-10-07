@@ -20,7 +20,7 @@ public class UnionFindAlgorithm {
 		qf.connect(1, 0);
 
 		qf.isConnected(0, 7);
-		
+
 		System.out.println("==============Quick Union Algorithm===========");
 		QuickUnion qu = new QuickUnion(10);
 		qu.union(4, 3);
@@ -37,36 +37,39 @@ public class UnionFindAlgorithm {
 	}
 }
 
-class QuickUnion{
-	
+class QuickUnion {
+
 	private int[] array;
-	public QuickUnion(int number){
+
+	public QuickUnion(int number) {
 		array = new int[number];
-		for(int i = 0; i < array.length; i++){
+		for (int i = 0; i < array.length; i++) {
 			array[i] = i;
 		}
 	}
-	
-	void union(int firstNumber,int secondNumber){
+
+	void union(int firstNumber, int secondNumber) {
 		int p = root(firstNumber);
 		int q = root(secondNumber);
 		array[p] = q;
 		printArray(array);
 	}
 
-	void isConnected(int firsNumber,int secondNumber){
-		if(root(firsNumber) == root(secondNumber)){
+	void isConnected(int firsNumber, int secondNumber) {
+		if (root(firsNumber) == root(secondNumber)) {
 			System.out.println(firsNumber + " and " + secondNumber
 					+ " are connected!!");
 		}
 	}
+
 	private int root(int number) {
-		while(number != array[number]){
+		while (number != array[number]) {
 			number = array[number];
-		}			
+		}
 		return number;
-		
+
 	}
+
 	private static void printArray(int[] arrayToPrint) {
 		System.out.print("[ ");
 		for (int j = 0; j < arrayToPrint.length; j++) {
@@ -74,8 +77,8 @@ class QuickUnion{
 		}
 		System.out.print("]");
 		System.out.println("");
-	}	
-	
+	}
+
 }
 
 class QuickFind {
