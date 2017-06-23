@@ -1,6 +1,6 @@
 package com.hackerearth.concepts.linkedlist;
 
-public class MyLinkedList<T> {
+public class MyLinkedList<T> implements MyListADT<T> {
 
 	private Node<T> head;
 	private Node<T> tail;
@@ -146,30 +146,4 @@ public class MyLinkedList<T> {
 		System.out.println();
 	}
 
-}
-
-class Node<T> {
-	private T data;
-	private Node<T> nextNode;
-
-	public Node(T data, Node<T> nextNode) {
-		this.data = data;
-		this.nextNode = nextNode;
-	}
-
-	public T getData() {
-		return data;
-	}
-
-	public void setData(T data) {
-		this.data = data;
-	}
-
-	public Node<T> getNextNode() {
-		return nextNode;
-	}
-
-	public void setNextNode(Node<T> nextNode) {
-		this.nextNode = nextNode;
-	}
 }

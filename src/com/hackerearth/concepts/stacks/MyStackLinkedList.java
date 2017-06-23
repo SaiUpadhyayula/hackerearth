@@ -3,7 +3,7 @@ package com.hackerearth.concepts.stacks;
 import com.hackerearth.concepts.linkedlist.MyLinkedList;
 
 public class MyStackLinkedList<T> {
-	private MyLinkedList<T> linkedList;	
+	private MyLinkedList<T> linkedList;
 	
 	public MyStackLinkedList(){
 		this.linkedList = new MyLinkedList<T>();
